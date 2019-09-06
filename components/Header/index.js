@@ -13,11 +13,16 @@ const headerContainer = document.querySelector('.header-container')
 headerContainer.appendChild(Header())
 
 function Header() {
-    //create components
+    // create components
     const header = document.createElement('div')
     const date = document.createElement('span')
     const title = document.createElement('h1')
     const temp = document.createElement('span')
+
+    // structure
+    header.appendChild(date)
+    header.appendChild(title)
+    header.appendChild(temp)
 
     // add classlists
     header.classList.add('header')
@@ -29,11 +34,6 @@ function Header() {
     title.textContent = 'Lambda Times'
     temp.textContent = '98°'
 
-    //structure
-    header.appendChild(date)
-    header.appendChild(title)
-    header.appendChild(temp)
 
     return header;
-
 }
