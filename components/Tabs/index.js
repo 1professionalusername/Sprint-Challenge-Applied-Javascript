@@ -15,7 +15,8 @@ axios.get('https://lambda-times-backend.herokuapp.com/topics')
             let newTab = createTab(topic)
             return newTab
         })
-    })
+    }).catch(err =>
+        console.log(err))
 
 
 let topicsSection = document.querySelector('.topics')
